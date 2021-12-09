@@ -30,9 +30,9 @@
       }
       stage('kubectl yaml') {
         steps {
-          withCredentials([file(credentialsId: 'haram-gke', variable: 'GC_KEY')]) {
+          withCredentials([file(credentialsId: 'gke-test', variable: 'GC_KEY')]) {
             sh 'gcloud auth activate-service-account --key-file=${GC_KEY}'
-            sh 'gcloud container clusters get-credentials haram-326012-gke --region asia-northeast1 --project haram-326012'
+    
             
                  }
           
