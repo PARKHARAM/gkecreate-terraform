@@ -30,9 +30,9 @@ resource "google_container_cluster" "primary" {
   #project = "vpc-share-network"
   
   
-  network    =  "projects/vpc-share-network/global/networks/vpc-network"
+  network    =  "https://www.googleapis.com/compute/v1/projects/vpc-share-network/global/networks/vpc-network"
   #subnetwork = "https://www.googleapis.com/compute/v1/projects/vpc-share-network/regions/asia-northeast3/subnetworks/sbn-test-1"
-  subnetwork = "projects/vpc-share-network/regions/asia-northeast1/subnetworks/sbn-test-4"
+  subnetwork = "https://www.googleapis.com/compute/v1/projects/vpc-share-network/regions/asia-northeast1/subnetworks/sbn-test-4"
   
   #network = data.google_compute_network.network.name
   
