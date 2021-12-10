@@ -9,7 +9,7 @@
 
       stage('Git Checkout') {
         steps {
-          git branch: 'main', credentialsId: 'gkfka133', url: 'https://github.com/PARKHARAM/terraform-gke' 
+          git branch: 'main', credentialsId: 'gkfka133', url: 'https://github.com/PARKHARAM/gkecreate-terraform' 
          
         }      
       }
