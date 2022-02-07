@@ -27,12 +27,12 @@ resource "google_container_cluster" "primary" {
   remove_default_node_pool = true
   initial_node_count       = 1
 
-  #project = "vpc-share-network"
+  #project = "pjt-vpc-network"
   
   
-  network    =  "https://www.googleapis.com/compute/v1/projects/vpc-share-network/global/networks/vpc-network"
-  #subnetwork = "https://www.googleapis.com/compute/v1/projects/vpc-share-network/regions/asia-northeast3/subnetworks/sbn-test-1"
-  subnetwork = "https://www.googleapis.com/compute/v1/projects/vpc-share-network/regions/asia-northeast1/subnetworks/sbn-test-4"
+  network    =  "https://www.googleapis.com/compute/v1/projects/pjt-vpc-network/global/networks/vpc-network"
+  #subnetwork = "https://www.googleapis.com/compute/v1/projects/pjt-vpc-network/regions/asia-northeast3/subnetworks/sbn-test-1"
+  subnetwork = "https://www.googleapis.com/compute/v1/projects/pjt-vpc-network/regions/asia-northeast3/subnetworks/sbn-test-4"
   
   #network = data.google_compute_network.network.name
   
