@@ -11,7 +11,26 @@
         steps {
           git branch: 'main', credentialsId: 'gkfka133', url: 'https://github.com/PARKHARAM/gkecreate-terraform' 
          
-        }      
+        }
+        steps([$class: 'BapSshPromotionPublisherPlugin']) {
+                sshPublisher(
+                    continueOnError: false, failOnError: true,
+                    publishers: [
+                        sshPublisherDesc(
+                            configName: "HR",//Jenkins 시스템 정보에 사전 입력한 서버 ID
+                            verbose: true,
+                            transfers: [
+                                sshTransfer(
+                                    sourceFiles: "test2.txt", //전송할 파일
+                                    removePrefix: "", //파일에서 삭제할 경로가 있다면 작성
+                                    remoteDirectory: "/home/test1" //배포할 위치
+                                    execCommand: "ls -al /home/test1/" //원격지에서 실행할 커맨드   
+                                    ]
+                        )
+                    ]
+                )
+            }
+      
       }
 
       stage('TF Init&Plan') {
@@ -22,6 +41,7 @@
             sh 'sshpass -p${test} scp  test2.txt test1@10.2.0.10:/home/test1'
          
             }
+            
            
           
           
