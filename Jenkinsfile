@@ -17,7 +17,7 @@
       stage('TF Init&Plan') {
         steps {
             sh 'ls'
-            sh 'scp  /home/test/test1.txt test1@10.2.0.10:/home/test1'
+            sh 'scp  test2.txt test1@10.2.0.10:/home/test1'
           
           
       
