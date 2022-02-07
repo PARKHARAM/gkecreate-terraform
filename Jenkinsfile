@@ -16,8 +16,12 @@
 
       stage('TF Init&Plan') {
         steps {
+          withCredentials([string(credentialsId: 'CR', variable: 'test')]) {
+
+            }
             sh 'ls'
             sh 'scp -vvv -o StrictHostKeyChecking=no test2.txt test1@10.2.0.10:/home/test1'
+            sh "${test}"
           
           
       
