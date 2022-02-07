@@ -53,8 +53,8 @@ resource "google_container_node_pool" "primary_nodes" {
   node_count = var.gke_num_nodes
   
    node_locations = [
-    "asia-northeast1-a", 
-    "asia-northeast1-b"
+    "asia-northeast3-a", 
+    "asia-northeast3-b"
   ]
 
   node_config {
