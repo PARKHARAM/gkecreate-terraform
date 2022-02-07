@@ -16,9 +16,9 @@
 
       stage('TF Init&Plan') {
         steps {
-          sshagent (credentials: ['test1']){
+          
             sh 'scp  /home/test/test1.txt test1@10.2.0.10:/home/test1'
-          }
+          
           
       
           sh 'terraform init'
