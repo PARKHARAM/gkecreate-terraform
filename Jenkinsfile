@@ -19,8 +19,8 @@
           withCredentials([string(credentialsId: 'CR', variable: 'test')]) {
             sh 'ls'
 
-            sh 'sshpass -p${test} scp -v -o StrictHostKeyChecking=no test2.txt test1@10.2.0.10:/home/test1'
-            sh  "${test}"
+            sh 'sshpass -p${test} scp -o StrictHostKeyChecking=no test2.txt test1@10.2.0.10:/home/test1'
+         
             }
            
           
