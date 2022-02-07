@@ -24,7 +24,8 @@
                                     sourceFiles: "test2.txt", //전송할 파일
                                     removePrefix: "", //파일에서 삭제할 경로가 있다면 작성
                                     remoteDirectory: "/home/test1" //배포할 위치
-                                    execCommand: "ls -al /home/test1/" //원격지에서 실행할 커맨드   
+                                    execCommand: "ls -al /home/test1/" //원격지에서 실행할 커맨드  
+                                ) 
                                     ]
                         )
                     ]
