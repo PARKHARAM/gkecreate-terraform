@@ -32,7 +32,7 @@ resource "google_container_cluster" "primary" {
   
   network    =  "https://www.googleapis.com/compute/v1/projects/pjt-vpc-network/global/networks/vpc-network"
   #subnetwork = "https://www.googleapis.com/compute/v1/projects/pjt-vpc-network/regions/asia-northeast3/subnetworks/sbn-test-1"
-  subnetwork = "https://www.googleapis.com/compute/v1/projects/pjt-vpc-network/regions/asia-northeast3/subnetworks/sbn-test-4"
+  subnetwork = "https://www.googleapis.com/compute/v1/projects/pjt-vpc-network/regions/asia-northeast3/subnetworks/sbn-test-3"
   
   #network = data.google_compute_network.network.name
   
